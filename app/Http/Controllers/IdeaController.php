@@ -53,9 +53,9 @@ class IdeaController extends Controller
     }
 
     public function destroy(Idea $idea){
-        if(auth()->id() !== $idea->user_id){
-            abort(404);
-        }
+        //if(auth()->id() !== $idea->user_id){
+            //abort(404);
+        //}
         $idea->delete();
         return redirect('/')->with('success', 'Idea was deleted succesfully');
 
